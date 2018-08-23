@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2018-08-23 10:32:52
+-- 產生時間： 2018-08-23 16:54:30
 -- 伺服器版本: 10.1.31-MariaDB
--- PHP 版本： 7.0.29
+-- PHP 版本： 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -38,7 +38,7 @@ CREATE TABLE `bot` (
 --
 
 INSERT INTO `bot` (`bot_seq`, `bot_txt`) VALUES
-(1, 'ç¬¬å››é¡ŒNO.2');
+(1, 'NO.2');
 
 -- --------------------------------------------------------
 
@@ -51,6 +51,16 @@ CREATE TABLE `item1` (
   `item1_txt` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 資料表的匯出資料 `item1`
+--
+
+INSERT INTO `item1` (`item1_seq`, `item1_txt`) VALUES
+(2, '流行皮件'),
+(3, '流行鞋區'),
+(4, '流行飾品'),
+(5, '背包');
+
 -- --------------------------------------------------------
 
 --
@@ -62,6 +72,20 @@ CREATE TABLE `item2` (
   `item2_txt` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `item2_i1` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 資料表的匯出資料 `item2`
+--
+
+INSERT INTO `item2` (`item2_seq`, `item2_txt`, `item2_i1`) VALUES
+(1, '男用皮件', 2),
+(2, '女用皮件', 2),
+(3, '少女鞋區', 3),
+(4, '紳士流行鞋區', 3),
+(5, '時尚手錶', 4),
+(6, '時尚珠寶', 4),
+(7, '背包', 5),
+(9, '拜託改><', 5);
 
 -- --------------------------------------------------------
 
@@ -156,13 +180,13 @@ ALTER TABLE `bot`
 -- 使用資料表 AUTO_INCREMENT `item1`
 --
 ALTER TABLE `item1`
-  MODIFY `item1_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `item1_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表 AUTO_INCREMENT `item2`
 --
 ALTER TABLE `item2`
-  MODIFY `item2_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `item2_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表 AUTO_INCREMENT `item3`
@@ -174,7 +198,7 @@ ALTER TABLE `item3`
 -- 使用資料表 AUTO_INCREMENT `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `member_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
