@@ -11,9 +11,9 @@ if(!empty($_POST["midmom"])){
 }
 ?>
 
-<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0">
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" >
   <tr>
-    <td colspan="2" align="center" valign="middle">商品分類</td>
+    <td colspan="2" align="center" valign="middle">商品分類　　<a href='admin.php?do=admin&redo=item'>商品管理</a></td>
   </tr>
   <form method="post">
   <tr>

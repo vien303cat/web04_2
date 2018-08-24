@@ -14,7 +14,8 @@ $relist["admin"] = "a_admin.php";
 $relist["adminadd"] = "adminadd.php";
 $relist["bot"] = "a_bot.php";
 $relist["th"] = "th.php";
-
+$relist["item"] = "item.php";
+$relist["itemadd"] = "itemadd.php";
 
 
 if(!empty($_GET["do"])){

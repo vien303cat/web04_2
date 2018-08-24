@@ -46,7 +46,7 @@ $c2  = mysqli_fetch_assoc($c1);
             	        	<a href="?do=admin&redo=logout" style="color:#f00;">登出</a>
                     </div>
                     </div>
-        <div id="right">
+        <div id="right" style="overflow:auto;">
 			<?php include_once($relist[$redo]); ?>
 					</div>
 					
