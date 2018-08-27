@@ -1,5 +1,18 @@
 <?php 
-
+if(!empty($_POST["itname"])){
+  $bigmom = $_POST["bigmom"];
+  $midmom = $_POST["midmom"];
+  $itname =  $_POST["itname"];
+  $price =  $_POST["price"];
+  $type  = $_POST["type"];
+  $howmuch = $_POST["howmuch"];
+  $con = $_POST["con"];
+  $imgname = $strtime.".".explode(".",$_FILES["img"]["name"])[1];
+  copy($_FILES["img"]["tmp_name"],"img/".$imgname);
+  $sql = "insert into item3 value(NULL,'$itname','$price','$type','$howmuch','$imgname','$con','$bigmom','$midmom','1')";
+  mysqli_query($link,$sql);
+  echo "<script>document.location.href='admin.php?do=admin&redo=item'</script>";
+}
 
 
 ?>

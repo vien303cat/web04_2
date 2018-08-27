@@ -22,22 +22,26 @@ include_once("head.php");
                                 <a href="?do=adminlog">管理登入</a>
            </div>
                 <marquee>情人節特惠活動 &nbsp; 年終特賣會開跑了   </marquee>      </div>
-        <div id="left" class="ct">
+        <div id="left" class="ct" style="overflow:auto;">
         	<div style="min-height:400px;">
-                        <div class=""><a href="#">123</a></div>
-                        
+                        <?php include_once("leftlist.php");?>
         	            </div>
                         <span>
             	<div>進站總人數</div>
                 <div style="color:#f00; font-size:28px;">
-                	00005                </div>
+                	00495                </div>
             </span>
                     </div>
-        <div id="right">
+        <div id="right" style="overflow:auto;">
                 <?php include_once($dolist[$do]); ?>
         	        </div>
-        <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
-        	頁尾版權 :        </div>
+                        <?php 
+					$sql = "select * from bot";
+					$c1  = mysqli_query($link,$sql);
+					$c2  = mysqli_fetch_assoc($c1);
+					?>
+	<div  style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
+        <?=$c2["bot_txt"]?>   </div>
     </div>
 
 </body></html>
