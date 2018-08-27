@@ -9,7 +9,8 @@ $dolist["adminlog"] = "adminlog.php";
 $dolist["all"] = "all.php";
 $dolist["item"] = "indexitem.php";
 $dolist["itemdata"] = "itemdata.php";
-
+$dolist["login"] = "login.php";
+$dolist["add"] = "add.php";
 ////////////////////////////////
 
 $relist["admin"] = "a_admin.php";

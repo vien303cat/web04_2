@@ -18,7 +18,10 @@ include_once("head.php");
                 <a href="?do=news">最新消息</a> |
                 <a href="?do=look">購物流程</a> |
                 <a href="?do=buycart">購物車</a> |
-                                <a href="?do=login">會員登入</a> |
+                <?php if(!empty($_SESSION["consumer"])){
+                        echo "<a href='logout.php'>登出 </a>"."|";
+                }else{ ?>
+                                <a href="?do=login">會員登入</a> | <?php } ?>
                                 <a href="?do=adminlog">管理登入</a>
            </div>
                 <marquee>情人節特惠活動 &nbsp; 年終特賣會開跑了   </marquee>      </div>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2018-08-27 10:26:51
+-- 產生時間： 2018-08-27 17:23:04
 -- 伺服器版本: 10.1.31-MariaDB
--- PHP 版本： 7.0.29
+-- PHP 版本： 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,6 +39,29 @@ CREATE TABLE `bot` (
 
 INSERT INTO `bot` (`bot_seq`, `bot_txt`) VALUES
 (1, 'NO.2');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `consumer`
+--
+
+CREATE TABLE `consumer` (
+  `consumer_seq` int(10) UNSIGNED NOT NULL,
+  `consumer_acc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_pw` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_cel` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_lo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_email` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 資料表的匯出資料 `consumer`
+--
+
+INSERT INTO `consumer` (`consumer_seq`, `consumer_acc`, `consumer_pw`, `consumer_name`, `consumer_cel`, `consumer_lo`, `consumer_email`) VALUES
+(1, 'xxx', 'xxx', '陳昱瑄', '0937166607', '幻想鄉', 'lf20916@yahoo.com.tw');
 
 -- --------------------------------------------------------
 
@@ -156,6 +179,12 @@ ALTER TABLE `bot`
   ADD PRIMARY KEY (`bot_seq`);
 
 --
+-- 資料表索引 `consumer`
+--
+ALTER TABLE `consumer`
+  ADD PRIMARY KEY (`consumer_seq`);
+
+--
 -- 資料表索引 `item1`
 --
 ALTER TABLE `item1`
@@ -188,6 +217,12 @@ ALTER TABLE `member`
 --
 ALTER TABLE `bot`
   MODIFY `bot_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- 使用資料表 AUTO_INCREMENT `consumer`
+--
+ALTER TABLE `consumer`
+  MODIFY `consumer_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- 使用資料表 AUTO_INCREMENT `item1`

@@ -13,7 +13,7 @@ $c2  = mysqli_fetch_assoc($c1);
     <td align="center" valign="middle" class="tt"><?=$c2["item3_txt"]?></td>
   </tr>
   <tr>
-    <td align="left" valign="middle" class="pp">價錢:<?=$c2["item3_price"]?></td>
+    <td align="left" valign="middle" class="pp">價錢:<?=$c2["item3_price"]?> <a href='#'><img src='img/0402.jpg'></a></td>
   </tr>
   <tr>
     <td align="left" valign="middle" class="pp">規格:<?=$c2["item3_type"]?></td>
