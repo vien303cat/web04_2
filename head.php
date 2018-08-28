@@ -20,4 +20,4 @@ $t_d = date("d");
 
 include_once("weblist.php");
 
-?>;
+?>

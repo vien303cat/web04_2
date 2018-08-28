@@ -11,6 +11,8 @@ $dolist["item"] = "indexitem.php";
 $dolist["itemdata"] = "itemdata.php";
 $dolist["login"] = "login.php";
 $dolist["add"] = "add.php";
+$dolist["buycar"] = "buycar.php";
+$dolist["buycheck"] = "buycheck.php";
 ////////////////////////////////
 
 $relist["admin"] = "a_admin.php";
@@ -20,7 +22,10 @@ $relist["th"] = "th.php";
 $relist["item"] = "item.php";
 $relist["itemadd"] = "itemadd.php";
 $relist["itemupdate"] = "itemupdate.php";
-
+$relist["mem"] = "a_mem.php";
+$relist["memdata"] = "a_memdata.php";
+$relist["order"] = "a_order.php";
+$relist["orderdata"] = "a_orderdata.php";
 if(!empty($_GET["do"])){
     $do = $_GET["do"];
 }else{

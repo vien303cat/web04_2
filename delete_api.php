@@ -18,6 +18,18 @@ if($_GET["table"] == "member"){
     $sql = "DELETE FROM item3 where item3_seq = '".$_GET["seq"]."'";
     mysqli_query($link,$sql);
     echo "<script>document.location.href='admin.php?do=admin&redo=item'</script>";
+}else if($_GET["table"] == "consumer"){
+    $sql = "DELETE FROM consumer where consumer_seq = '".$_GET["seq"]."'";
+    mysqli_query($link,$sql);
+    echo "<script>document.location.href='admin.php?do=admin&redo=mem'</script>";
+}else if($_GET["table"] == "buycar"){
+    $sql = "DELETE FROM buycar where buycar_seq = '".$_GET["seq"]."'";
+    mysqli_query($link,$sql);
+    echo "<script>document.location.href='index.php?do=buycar'</script>";
+}else if($_GET["table"] == "buylog"){
+    $sql = "DELETE FROM buylog where buylog_no = '".$_GET["no"]."'";
+    mysqli_query($link,$sql);
+    echo "<script>document.location.href='admin.php?do=admin&redo=order'</script>";
 }
 
 

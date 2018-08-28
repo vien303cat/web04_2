@@ -1,12 +1,8 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0039) -->
 <?php
 include_once("head.php");
-?>
-
-<body>
+?><body>
 <iframe name="back" style="display:none;"></iframe>
 	<div id="main" style="width:1024px;">
     	<div id="top">
@@ -17,7 +13,7 @@ include_once("head.php");
                 <a href="?">回首頁</a> |
                 <a href="?do=news">最新消息</a> |
                 <a href="?do=look">購物流程</a> |
-                <a href="?do=buycart">購物車</a> |
+                <a href="?do=buycar">購物車</a> |
                 <?php if(!empty($_SESSION["consumer"])){
                         echo "<a href='logout.php'>登出 </a>"."|";
                 }else{ ?>

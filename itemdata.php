@@ -1,5 +1,5 @@
 <?php
-if(!empty($_SESSION["consumer"])){
+if(empty($_SESSION["consumer"])){
     echo "<script>document.location.href='index.php?do=login'</script>";
 }
 
@@ -31,10 +31,17 @@ $c2  = mysqli_fetch_assoc($c1);
     <td align="left" valign="middle" class="pp">庫存量:<?=$c2["item3_howmuch"]?></td>
   </tr>
   <tr>
-    <td colspan="2" align="center" valign="middle" class="tt">購買數量</td>
+    <td colspan="2" align="center" valign="middle" class="tt">購買數量<input tpye="text" id="howmuch" value="1" name="howmuch"><img src="img/0402.jpg" onclick="putbuy()"> </td>
   </tr>
   <tr>
     <td colspan="2" align="center" valign="middle"><input type="button" value="返回" onclick="document.location.href='index.php'" /></td>
   </tr>
 </table>
 </form>
+
+<script>
+function putbuy(){
+  var how = document.getElementById("howmuch").value;
+  document.location.href="buyapi.php?how="+how+"&seq=<?=$_GET['seq']?>";
+}
+</script>

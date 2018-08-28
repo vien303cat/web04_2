@@ -81,7 +81,7 @@ $cc2  = mysqli_fetch_assoc($cc1);
   </tr>
   <tr>
     <td align="center" valign="middle" class="tt" width="50%" >商品圖片</td>
-    <td align="center" valign="middle" class="pp" width="50%" ><input type="file" name="img"><input tpye="hidden" name="imgname" value="<?=$cc2["item3_img"]?>"</td>
+    <td align="center" valign="middle" class="pp" width="50%" ><input type="file" name="img"><input type="hidden" name="imgname" value="<?=$cc2["item3_img"]?>"</td>
   </tr>
   <tr>
     <td align="center" valign="middle" class="tt" width="50%" >商品介紹</td>

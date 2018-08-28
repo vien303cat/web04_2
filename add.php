@@ -13,7 +13,7 @@ if(!empty($_POST["ifadd"])){
     if($row == 1 || $acc == "admin"){
         echo "<script>alert('此帳號已存在或是不可使用admin註冊！')</script>";
     }else{
-        $sql = "insert into consumer value(null,'$acc','$pw','$name','$cel','$lo','$email')";
+        $sql = "insert into consumer value(null,'$acc','$pw','$name','$cel','$lo','$email','$nowtime')";
         echo $sql;
         mysqli_query($link,$sql);
         echo "<script>document.location.href='index.php'</script>";

@@ -7,7 +7,6 @@ include_once("head.php");
 
 
 
-
 $sql = "select * from member where member_acc ='".$_SESSION["member"]."'";
 $c1  = mysqli_query($link,$sql);
 $c2  = mysqli_fetch_assoc($c1);
@@ -56,7 +55,7 @@ $c2  = mysqli_fetch_assoc($c1);
 					$c1  = mysqli_query($link,$sql);
 					$c2  = mysqli_fetch_assoc($c1);
 					?>
-	<div  style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
+	<div  style="line-height:70px;color:#FFF;background:url(icon/bot.png);" class="ct">
         <?=$c2["bot_txt"]?>   </div>
     </div>
 

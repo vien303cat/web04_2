@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2018-08-27 17:23:04
+-- 產生時間： 2018-08-28 10:22:16
 -- 伺服器版本: 10.1.31-MariaDB
--- PHP 版本： 5.6.35
+-- PHP 版本： 7.0.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,6 +43,56 @@ INSERT INTO `bot` (`bot_seq`, `bot_txt`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 資料表結構 `buycar`
+--
+
+CREATE TABLE `buycar` (
+  `buycar_seq` int(10) UNSIGNED NOT NULL,
+  `buycar_acc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buycar_i3` int(10) NOT NULL,
+  `buycar_howmuch` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 資料表的匯出資料 `buycar`
+--
+
+INSERT INTO `buycar` (`buycar_seq`, `buycar_acc`, `buycar_i3`, `buycar_howmuch`) VALUES
+(5, '11', 12, 1),
+(6, '11', 11, 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `buylog`
+--
+
+CREATE TABLE `buylog` (
+  `buylog_seq` int(10) UNSIGNED NOT NULL,
+  `buylog_accseq` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buylog_i3` int(10) NOT NULL,
+  `buylog_howmuch` int(10) NOT NULL,
+  `buylog_total` int(10) NOT NULL,
+  `buylog_no` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buylog_time` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 資料表的匯出資料 `buylog`
+--
+
+INSERT INTO `buylog` (`buylog_seq`, `buylog_accseq`, `buylog_i3`, `buylog_howmuch`, `buylog_total`, `buylog_no`, `buylog_time`) VALUES
+(17, '6', 12, 1, 685, '20180828153000', '2018-08-28'),
+(18, '6', 13, 1, 800, '20180828153000', '2018-08-28'),
+(19, '6', 15, 3, 7950, '20180828153000', '2018-08-28'),
+(20, '1', 11, 1, 1200, '20180828155502', '2018-08-28'),
+(21, '1', 14, 1, 1000, '20180828155502', '2018-08-28'),
+(22, '1', 13, 1, 800, '20180828155502', '2018-08-28'),
+(23, '1', 11, 1, 1200, '20180828155502', '2018-08-28');
+
+-- --------------------------------------------------------
+
+--
 -- 資料表結構 `consumer`
 --
 
@@ -53,15 +103,21 @@ CREATE TABLE `consumer` (
   `consumer_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `consumer_cel` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `consumer_lo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `consumer_email` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `consumer_email` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consumer_time` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 資料表的匯出資料 `consumer`
 --
 
-INSERT INTO `consumer` (`consumer_seq`, `consumer_acc`, `consumer_pw`, `consumer_name`, `consumer_cel`, `consumer_lo`, `consumer_email`) VALUES
-(1, 'xxx', 'xxx', '陳昱瑄', '0937166607', '幻想鄉', 'lf20916@yahoo.com.tw');
+INSERT INTO `consumer` (`consumer_seq`, `consumer_acc`, `consumer_pw`, `consumer_name`, `consumer_cel`, `consumer_lo`, `consumer_email`, `consumer_time`) VALUES
+(1, 'xxx', 'xxx', 'candyyyyy', '12', 'tw', 'qoo@wow.tw', '0000-00-00'),
+(3, 'uuu', 'uuu', 'candyyyyy', '12', 'tw', 'qoo@wow.tw', '2018-08-28'),
+(4, '321321', '32121', 'candyyyyy', '12', 'tw', 'qoo@wow.tw', '2018-08-28'),
+(5, 'eee', 'eee', 'eee', '937166607', 'tw', 'lf20916@yahoo.com.tw', '2018-08-28'),
+(6, '777', '777', '7_7', '09377777777', '7v7/', 'lf20916@yahoo.com.tw', '2018-08-28'),
+(7, '33', '33', '33', '33', '33', '33', '2018-08-28');
 
 -- --------------------------------------------------------
 
@@ -179,6 +235,18 @@ ALTER TABLE `bot`
   ADD PRIMARY KEY (`bot_seq`);
 
 --
+-- 資料表索引 `buycar`
+--
+ALTER TABLE `buycar`
+  ADD PRIMARY KEY (`buycar_seq`);
+
+--
+-- 資料表索引 `buylog`
+--
+ALTER TABLE `buylog`
+  ADD PRIMARY KEY (`buylog_seq`);
+
+--
 -- 資料表索引 `consumer`
 --
 ALTER TABLE `consumer`
@@ -219,10 +287,22 @@ ALTER TABLE `bot`
   MODIFY `bot_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- 使用資料表 AUTO_INCREMENT `buycar`
+--
+ALTER TABLE `buycar`
+  MODIFY `buycar_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- 使用資料表 AUTO_INCREMENT `buylog`
+--
+ALTER TABLE `buylog`
+  MODIFY `buylog_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
 -- 使用資料表 AUTO_INCREMENT `consumer`
 --
 ALTER TABLE `consumer`
-  MODIFY `consumer_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `consumer_seq` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- 使用資料表 AUTO_INCREMENT `item1`
